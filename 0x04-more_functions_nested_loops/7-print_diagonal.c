@@ -3,7 +3,7 @@
 /**
   * print_diagonal - draws a diagonal line on the terminal
   *
-  * @n: length of diagonal
+  * @n: number of time \ should be printed
   *
   * Return: 0
   */
@@ -13,8 +13,7 @@ void print_diagonal(int n)
 
 	if (n <= 0)
 		_putchar('\n');
-
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
 		for (it = 0; it < i; it++)
 		{
