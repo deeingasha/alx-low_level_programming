@@ -40,6 +40,9 @@ void print_buffer(char *b, int size)
 			else
 				printf(".");
 		}
+		if (bytes >= size)
+			continue;
+		printf("\n");
 	}
 		if (size <= 0)
 			printf("\n");
