@@ -29,10 +29,11 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	i = 0;
-	while (str[i] <= str[len])
+	while (str[i] != '\0' )
 	{
 		cp[i] = str[i];
 		i++;
 	}
+	cp[i] = '\0';
 	return (cp);
 }
