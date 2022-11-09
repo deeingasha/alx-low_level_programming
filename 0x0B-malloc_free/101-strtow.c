@@ -14,6 +14,8 @@ char **strtow(char *str)
 	char **ptr;
 /*	int i;*/
 
+	if (*str == 32)
+		str = 0;
 	if (str == NULL || *str == 0)
 		return (NULL);
 
