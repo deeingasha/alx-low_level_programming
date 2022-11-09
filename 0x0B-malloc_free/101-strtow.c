@@ -25,6 +25,6 @@ char **strtow(char *str)
 	 * separate and store
 	 *
 	 */
-	ptr = malloc(sizeof(char) * 40); /* random to compile*/
+	ptr = malloc(sizeof(char) * 4193); /* random to compile*/
 	return (ptr);
 }
