@@ -24,12 +24,12 @@ char *_strdup(char *str)
 	len++;
 
 	cp = malloc(sizeof(char) * len);
-	if (str == NULL || cp == NULL)
+	if (len == 0 || cp == NULL)
 	{
 		return (NULL);
 	}
 	i = 0;
-	while (str[i] != '\0' )
+	while (str[i] != '\0')
 	{
 		cp[i] = str[i];
 		i++;
