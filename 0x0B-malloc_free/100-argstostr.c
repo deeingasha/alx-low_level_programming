@@ -13,7 +13,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *s;
-	int i, j;
+	int i, j, c;
 	int len = 0;
 
 	if (ac == 0 || av == NULL)
@@ -33,13 +33,14 @@ char *argstostr(int ac, char **av)
 	if (s == NULL)
 		return (NULL);
 
+	c = 0;
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			s[i] = av[i][j];
+			s[c++] = av[i][j];
 		}
-	/*	s[i] = '\n';*/
+		s[c++] = '\n';
 	}
 	return (s);
 }
