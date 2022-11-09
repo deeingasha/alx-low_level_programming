@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	char *cp;
 	int len = 0;
 
-	if (str == NULL)
+	if (str == NULL)           /*have to check first to avoid segfault */
 		return (NULL);
 
 	while (str[i] != '\0')
@@ -26,7 +26,7 @@ char *_strdup(char *str)
 	}
 	len++;
 
-	cp = malloc(sizeof(char) * (len + 1));
+	cp = malloc(sizeof(char) * (len));
 
 	if (cp == NULL)
 		return (NULL);
