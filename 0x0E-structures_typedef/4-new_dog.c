@@ -18,14 +18,20 @@ char *_strdup(char *str)
 	if (str == NULL)           /*have to check first to avoid segfault */
 		return (NULL);
 
-	while (*str++)
-		len++;
 
-	cp = malloc(sizeof(char) * (len + 1));
+	while (str[i] != '\0')
+	{
+		len++;
+		i++;
+	}
+	len++;
+
+	cp = malloc(sizeof(char) * (len));len++;
 
 	if (cp == NULL)
 		return (NULL);
 
+	i = 0;
 	while (str[i] != '\0')
 	{
 		cp[i] = str[i];
