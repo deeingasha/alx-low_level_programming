@@ -25,15 +25,16 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	op = argv[2];
-	result = get_op_func(op)(a, b);
-	if (!result)
+
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	else
-	{
-		printf("%d\n", result);
-	}
+
+
+	result = get_op_func(op)(a, b);
+	printf("%d\n", result);
+
 	return (0);
 }
