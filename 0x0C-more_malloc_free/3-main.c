@@ -35,11 +35,10 @@ void simple_print_buffer(int *buffer, unsigned int size)
 int main(void)
 {
 	int *a;
-
+/*
 	a = array_range(0, 10);
 	simple_print_buffer(a, 11);
 	free(a);
-	/*
 	a = array_range(0, 98);
 	simple_print_buffer(a, 98);
 	free(a);
@@ -49,10 +48,10 @@ int main(void)
 	a = array_range(-512, 512);
 	simple_print_buffer(a, 1024);
 	free(a); 
-
+*/
 	a = array_range(-2048, -1024);
 	simple_print_buffer(a, 1024);
 	free(a);
-*/
+
 	return (0);
 }
